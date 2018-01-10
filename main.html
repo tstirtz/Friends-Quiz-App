@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Friend's Quiz</title>
 	<link rel="stylesheet" type="text/css" href= "style.css">
@@ -23,7 +23,7 @@
 
 
 <!--Questions page -->
-	<main role = "main" class= "questions-page js-questions-page">
+	<section role = "region" class= "questions-page js-questions-page">
 		<header role= "banner" class= "friends-logo">
 			<img class= "page-header-image" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt = "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
 		</header>
@@ -47,7 +47,7 @@
 				<p class= "js-score-display score-display"></p>
 			</div>
 		</footer>
-	</main>
+	</section>
 
 
 <!--  This is a modal that will pop up when the user gets a question correct -->
@@ -82,7 +82,7 @@
 <!-- Results Page -->
 
 <!--Unsure how to section a file like this where there are multiple pages. Should I use a <section> element for each page? -->
-	<main role="main" class = "results-page js-results-page">
+	<section role="region" class = "results-page js-results-page">
 		<header role="banner" class="friends-logo">
 			<img class= "page-header-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt= "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
 		</header>
@@ -96,7 +96,7 @@
 		<div class= "start-over-button">
 			<button type="button" class= "js-start-over-button w3-button w3-black w3-round w3-hover-blue">Start Over</button>
 		</div>
-	</main>
+	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
