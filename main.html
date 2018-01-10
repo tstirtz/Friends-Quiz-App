@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend's Quiz</title>
+	<link rel="stylesheet" type="text/css" href= "style.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet"  media='screen and (max-width: 500px)' href= "responsive.css">
+</head>
+<body class= "w3-content">
+
+<!-- Home Page -->
+
+	<main role="main" class = "start-page ">
+		<header role = "banner">
+			<h1>Do You Know</h1>
+			<img class= "start-page-img" src = "https://ih0.redbubble.net/image.106417796.8782/flat,800x800,070,f.u7.jpg" alt = "Logo from the sitcom 'Friends', that says friends. DIrectly below is a silhouette of the back of a couch with people sitting on it, and a lamp next to the couch.">
+		</header>
+		<div class= "w3-center">
+		<button type="button" class = "start-quiz-button w3-button w3-black w3-round w3-hover-blue">Start Quiz</button>
+	</div>
+	</main>
+
+
+
+<!--Questions page -->
+	<main role = "main" class= "questions-page js-questions-page">
+		<header role= "banner" class= "friends-logo">
+			<img class= "page-header-image" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt = "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
+		</header>
+		<form action = "#" method = "post" class= "questions-form" id ="form1">
+			<fieldset name = "questions">
+				<div class = "js-multiple-choice-answers-container multiple-choice-container">
+				</div>
+				<div class= "submit-button">
+				<button type= "submit" class= "js-submit-question w3-button w3-black w3-round w3-hover-blue">Submit</button>
+				</div>
+			</fieldset>
+		</form>
+
+
+<!--not sure if footer is semantically appropriate to use here instead of section -->
+		<footer role="" class = "js-progress-banner progress-banner">
+			<div class= "question-score-display">
+				<p class= "js-question-number-display question-display"></p>
+			</div>
+			<div class= "question-score-display">
+				<p class= "js-score-display score-display"></p>
+			</div>
+		</footer>
+	</main>
+
+
+<!--  This is a modal that will pop up when the user gets a question correct -->
+
+	<div id="answer-correct-modal" class= "js-correct-modal answer-modal">
+		<div class= "modal-content">
+			<header >Correct!</header>
+			<div class= " modal-gif-container">
+			  <img class= "modal-gif" src="http://i0.wp.com/blog.twigly.in/wp-content/uploads/2016/01/joey-chandler-dance.gif" alt="Joey and Chandler from the sitcom Friends dancing.">
+			</div>
+			<footer>
+				<button type="submit" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
+			</footer>
+		</div>
+	</div>
+
+<!-- This is a modal that will pop up when the user gets a question incorrect -->
+
+	<div id="answer-incorrect-modal" class= "js-incorrect-modal answer-modal">
+		<div class= "modal-content">
+			<header>Sorry, that is incorrect!</header>
+			<div class= " modal-gif-container">
+			  <img class= "modal-gif" src="http://akns-images.eonline.com/eol_images/Entire_Site/201577/rs_500x249-150807141005-6357287387814916281888778685_tumblr_mhaejpmCUx1r8b21so1_500.gif">
+			</div>
+			<p class = "js-answer-feedback answer-feedback"></p>
+			<footer>
+				<button type="submit" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
+			</footer>
+		</div>
+	</div>
+
+<!-- Results Page -->
+
+<!--Unsure how to section a file like this where there are multiple pages. Should I use a <section> element for each page? -->
+	<main role="main" class = "results-page js-results-page">
+		<header role="banner" class="friends-logo">
+			<img class= "page-header-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt= "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
+		</header>
+		<section>
+			<p>How You Doin'?</p>
+			<div>
+				<p class = "js-final-score final score"></p>
+			</div>
+		</section>
+		<img src="http://www.etonline.com/sites/default/files/images/2015-07/joey_howyoudoin.gif">
+		<div class= "start-over-button">
+			<button type="button" class= "js-start-over-button w3-button w3-black w3-round w3-hover-blue">Start Over</button>
+		</div>
+	</main>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
