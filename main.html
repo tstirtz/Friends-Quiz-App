@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<title>Friend's Quiz</title>
 	<link rel="stylesheet" type="text/css" href= "style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet"  media='screen and (max-width: 500px)' href= "responsive.css">
+	<link rel="stylesheet"  media='screen and (max-width: 600px)' href= "responsive.css">
 </head>
 <body class= "w3-content">
 
@@ -23,23 +23,23 @@
 
 
 <!--Questions page -->
-	<section role = "region" class= "questions-page js-questions-page">
+	<main role = "main" class= "questions-page js-questions-page">
 		<header role= "banner" class= "friends-logo">
 			<img class= "page-header-image" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt = "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
 		</header>
 		<form action = "#" method = "post" class= "questions-form" id ="form1">
 			<fieldset name = "questions">
-				<div class = "js-multiple-choice-answers-container multiple-choice-container">
-				</div>
+				<section role="region" class = "js-multiple-choice-answers-container multiple-choice-container">
+				</section>
 				<div class= "submit-button">
-				<button type= "submit" class= "js-submit-question w3-button w3-black w3-round w3-hover-blue">Submit</button>
+				<button type= "button" class= "js-submit-question w3-button w3-black w3-round w3-hover-blue">Submit</button>
 				</div>
 			</fieldset>
 		</form>
 
 
 <!--not sure if footer is semantically appropriate to use here instead of section -->
-		<footer role="contentinfo" class = "js-progress-banner progress-banner">
+		<footer role="" class = "js-progress-banner progress-banner">
 			<div class= "question-score-display">
 				<p class= "js-question-number-display question-display"></p>
 			</div>
@@ -47,7 +47,7 @@
 				<p class= "js-score-display score-display"></p>
 			</div>
 		</footer>
-	</section>
+	</main>
 
 
 <!--  This is a modal that will pop up when the user gets a question correct -->
@@ -59,7 +59,7 @@
 			  <img class= "modal-gif" src="http://i0.wp.com/blog.twigly.in/wp-content/uploads/2016/01/joey-chandler-dance.gif" alt="Joey and Chandler from the sitcom Friends dancing.">
 			</div>
 			<footer>
-				<button type="submit" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
+				<button type="button" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
 			</footer>
 		</div>
 	</div>
@@ -74,7 +74,7 @@
 			</div>
 			<p class = "js-answer-feedback answer-feedback"></p>
 			<footer>
-				<button type="submit" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
+				<button type="button" class= "js-next-question next-button w3-button w3-black w3-round w3-hover-blue">Next</button>
 			</footer>
 		</div>
 	</div>
@@ -82,7 +82,7 @@
 <!-- Results Page -->
 
 <!--Unsure how to section a file like this where there are multiple pages. Should I use a <section> element for each page? -->
-	<section role="region" aria-label="Results page" class = "results-page js-results-page">
+	<main role="main" class = "results-page js-results-page">
 		<header role="banner" class="friends-logo">
 			<img class= "page-header-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt= "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
 		</header>
@@ -96,7 +96,7 @@
 		<div class= "start-over-button">
 			<button type="button" class= "js-start-over-button w3-button w3-black w3-round w3-hover-blue">Start Over</button>
 		</div>
-	</section>
+	</main>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>

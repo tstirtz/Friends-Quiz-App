@@ -3,82 +3,82 @@
 const questionsArray = [
 	{
 		question: "Who is the Readers Digest addressed to that gets delivered to Chandler and Joeys?",
-		'A': "A) Mr. Chandler Bing",
-		'B': "B) Ms. Chanandler Bong",
-		'C': "C) Mr. Joey Tribbiani",
-		'D': "D) Ms. Rachel Green",
+		'A': "Mr. Chandler Bing",
+		'B': "Ms. Chanandler Bong",
+		'C': "Mr. Joey Tribbiani",
+		'D': "Ms. Rachel Green",
 		correctAnswer: "B"
 	},
 	{
 		question: "What is the name that Mike, Phoebe's fiance, wants to change his name to?",
-		'A': "A) Princess Consuela Banana Hammock",
-		'B': "B) Crap Bag",
-		'C': "C) Mike Roch",
-		'D': "D) Hyot",
+		'A': "Princess Consuela Banana Hammock",
+		'B': "Crap Bag",
+		'C': "Mike Roch",
+		'D': "Hyot",
 		correctAnswer: "B"
 	},
 	{
 		question: "What does Ross call the Sandwich that he makes with Thanksgiving left overs?",
-		'A': "A) The Holiday Hammy",
-		'B': "B) The Tasty Turkey",
-		'C': "C) The Moist Maker",
-		'D': "D) The Cranberry Club",
+		'A': "The Holiday Hammy",
+		'B': "The Tasty Turkey",
+		'C': "The Moist Maker",
+		'D': "The Cranberry Club",
 		correctAnswer: "C"
 	},
 	{
 		question: "In Season 3, What causes Joey to have to wear a sling?",
-		'A': "A) Playing fire ball",
-		'B': "B) Falling down the stairs",
-		'C': "C) Hit by a car",
-		'D': "D) Jumping on the bed",
+		'A': "Playing fire ball",
+		'B': "Falling down the stairs",
+		'C': "Hit by a car",
+		'D': "Jumping on the bed",
 		correctAnswer: "D"
 	},
 	{
 		question: "What was Central Perk before it was a coffee shop?",
-		'A': "A) A bar",
-		'B': "B) Another coffee shop",
-		'C': "C) Movie rental shop",
-		'D': "D) Convenience store",
+		'A': "A bar",
+		'B': "Another coffee shop",
+		'C': "Movie rental shop",
+		'D': "Convenience store",
 		correctAnswer: "A"
 	},
 	{
 		question: "In one episode what does Chandler say is the source of all his power, in regards to his humor?",
-		'A': "A) His Rocky and Bullwinkle socks",
-		'B': "B) His parents divorcing when he was a child",
-		'C': "C) His nubin",
-		'D': "D) Not being good with women",
+		'A': "His Rocky and Bullwinkle socks",
+		'B': "His parents divorcing when he was a child",
+		'C': "His nubin",
+		'D': "Not being good with women",
 		correctAnswer: "C"
 	},
 	{
 		question: "What does Rachel convince Ross's girlfriend to do when they are all at the beach for the weekend?",
-		'A': "A) Shave her head",
-		'B': "B) Break up with Ross",
-		'C': "C) Play strip poker",
-		'D': "D) To go home",
+		'A': "Shave her head",
+		'B': "Break up with Ross",
+		'C': "Play strip poker",
+		'D': "To go home",
 		correctAnswer: "A"
 	},
 	{
 		question: "What does Ross dress up as at a Halloween party?",
-		'A': "A) An armadillo",
-		'B': "B) Superman",
-		'C': "C) A pink bunny",
-		'D': "D) Spudnik",
+		'A': "An armadillo",
+		'B': "Superman",
+		'C': "A pink bunny",
+		'D': "Spudnik",
 		correctAnswer: "D"
 	},
 	{
 		question: "How many times has Ross been married?",
-		'A': "A) 1",
-		'B': "B) 2",
-		'C': "C) 3",
-		'D': "D) 4",
+		'A': "1",
+		'B': "2",
+		'C': "3",
+		'D': "4",
 		correctAnswer: "C"
 	},
 	{
 		question: "What is the name of Joey's Recliner?",
-		'A': "A) Stevie",
-		'B': "B) Rosita",
-		'C': "C) The General",
-		'D': "D) Porsche",
+		'A': "Stevie",
+		'B': "Rosita",
+		'C': "The General",
+		'D': "Porsche",
 		correctAnswer: "B"
 	}
 ];
@@ -91,14 +91,15 @@ function startQuiz(){
 	//user should be able to click a button to start the quiz
 	//render question page with random question and the potential answers
 	$(".start-quiz-button").on("click", function(){
-		$(".start-page").addClass("js-start-page"); //adds class which hides the start page
-		$(".questions-page").toggleClass("js-questions-page", false); //removes class which is hiding the questions page
+		$(".start-page").addClass("js-start-page");
+		$(".questions-page").toggleClass("js-questions-page", false);
 	});
 }
 
 
 function renderQuestion(){
 	//render question page with question and the potential answers
+	//when the user clicks the next button in the modale, move to next question
  		$(".js-multiple-choice-answers-container").prepend(
 			`<h1 class = "js-question-string">${(questionsArray[currentQuestionIndex]['question'])}</h1>`
 		);
@@ -108,17 +109,17 @@ function renderQuestion(){
 function renderAnswers(){
 	$(".js-multiple-choice-answers-container").append(
 		`<ul class= "js-multiple-choice-answers">
-				<li><input type="radio" name="answer" id="multiple-choice-answer-A" value= "A" required>
-					<label for="multiple-choice-answer-A">${questionsArray[currentQuestionIndex]['A']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "A" required>
+					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['A']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-B" value= "B" required>
-					<label for="multiple-choice-answer-B">${questionsArray[currentQuestionIndex]['B']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "B" required>
+					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['B']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-C" value= "C" required>
-					<label for="multiple-choice-answer-C">${questionsArray[currentQuestionIndex]['C']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "C" required>
+					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['C']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-D" value= "D" required>
-					<label for="multiple-choice-answer-D">${questionsArray[currentQuestionIndex]['D']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "D" required>
+					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['D']}</label>
 				</li>
 			</ul>`
 		);
@@ -128,7 +129,6 @@ function renderAnswers(){
 
 function updateQuestionNumberDisplay(){
 		$(".js-progress-banner .js-question-number-display").text("Question " + currentQuestionCounter + " / 10");
-		$(".js-questions-page").setAttribut("aria-label", `Question page ${currentQuestionCounter}`);
 }
 
 
@@ -205,7 +205,7 @@ function toggleCorrectModalClass(){
 function handleNextButton(){
 	$(".js-next-question").on('click', function(){
 		incrementCurrentQuestionIndex();
-		$(".js-submit-question").prop('disabled', false); //Submit button is no longer disabled once next button in modal is clicked
+		$(".js-submit-question").prop('disabled', false);
 
 
 		console.log("handleNextButton: answer incorrect modal state " + $('#answer-incorrect-modal').hasClass('js-incorrect-modal'));
@@ -213,10 +213,10 @@ function handleNextButton(){
 
 		if($('#answer-incorrect-modal').hasClass('js-incorrect-modal') === false){
 			console.log("handleNextButton: toggleIncorrectModalClass");
-			toggleIncorrectModalClass(); //hides incorrect modal if it is visible
+			toggleIncorrectModalClass();
 		}else if($('#answer-correct-modal').hasClass('js-correct-modal') === false){
 			console.log("handleNextButton: toggleCorrectModalClass");
-			toggleCorrectModalClass(); //hides correct modal if it is visible
+			toggleCorrectModalClass();
 		}
 console.log(`handleNextButton: the currentQuestionIndex is ${currentQuestionIndex}`);
 console.log(`handleNextButton: the currentQuestionCounter is ${currentQuestionCounter}`);
@@ -226,13 +226,13 @@ console.log(`handleNextButton: the currentQuestionCounter is ${currentQuestionCo
 
 function renderNextQuestion(){
 	$(".js-next-question").on('click',function(){
-		$(".js-question-string").replaceWith(renderQuestion());//replaces previous question with next question
+		$(".js-question-string").replaceWith(renderQuestion());
 	});
 }
 
 function renderNextAnswers(){
 	$(".js-next-question").on('click',function(){
-		$(".js-multiple-choice-answers").replaceWith(renderAnswers());//replaces previous answers with new answers
+		$(".js-multiple-choice-answers").replaceWith(renderAnswers());
 	});
 }
 
