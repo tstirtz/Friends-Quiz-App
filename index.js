@@ -128,6 +128,7 @@ function renderAnswers(){
 
 function updateQuestionNumberDisplay(){
 		$(".js-progress-banner .js-question-number-display").text("Question " + currentQuestionCounter + " / 10");
+		$(".js-questions-page").setAttribut("aria-label", `Question page ${currentQuestionCounter}`);
 }
 
 
