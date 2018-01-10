@@ -109,17 +109,17 @@ function renderQuestion(){
 function renderAnswers(){
 	$(".js-multiple-choice-answers-container").append(
 		`<ul class= "js-multiple-choice-answers">
-				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "A" required>
-					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['A']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-A" value= "A" required>
+					<label for="multiple-choice-answer-A">${questionsArray[currentQuestionIndex]['A']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "B" required>
-					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['B']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-B" value= "B" required>
+					<label for="multiple-choice-answer-B">${questionsArray[currentQuestionIndex]['B']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "C" required>
-					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['C']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-C" value= "C" required>
+					<label for="multiple-choice-answer-C">${questionsArray[currentQuestionIndex]['C']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer" value= "D" required>
-					<label for="multiple-choice-answer">${questionsArray[currentQuestionIndex]['D']}</label>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-D" value= "D" required>
+					<label for="multiple-choice-answer-D">${questionsArray[currentQuestionIndex]['D']}</label>
 				</li>
 			</ul>`
 		);
