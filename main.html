@@ -28,7 +28,7 @@
 			<img class= "page-header-image" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Friends_logo.svg/1024px-Friends_logo.svg.png" alt = "Logo from the sitcom 'Friends'. The word friends with colored dots inbetween each letter.">
 		</header>
 		<form action = "#" method = "post" class= "questions-form" id ="form1">
-			<fieldset name = "questions">
+			<fieldset id= "questions-and-answers" class="js-question-answer-fieldset">
 				<section role="region" class = "js-multiple-choice-answers-container multiple-choice-container">
 				</section>
 				<div class= "submit-button">
@@ -39,7 +39,7 @@
 
 
 <!--not sure if footer is semantically appropriate to use here instead of section -->
-		<footer role="" class = "js-progress-banner progress-banner">
+		<footer role="contentinfo" class = "js-progress-banner progress-banner">
 			<div class= "question-score-display">
 				<p class= "js-question-number-display question-display"></p>
 			</div>
@@ -70,7 +70,7 @@
 		<div class= "modal-content">
 			<header>Sorry, that is incorrect!</header>
 			<div class= " modal-gif-container">
-			  <img class= "modal-gif" src="http://akns-images.eonline.com/eol_images/Entire_Site/201577/rs_500x249-150807141005-6357287387814916281888778685_tumblr_mhaejpmCUx1r8b21so1_500.gif">
+			  <img class= "modal-gif" src="http://akns-images.eonline.com/eol_images/Entire_Site/201577/rs_500x249-150807141005-6357287387814916281888778685_tumblr_mhaejpmCUx1r8b21so1_500.gif" alt="Joey staring longingly through a fountain which makes it look like he is staring out a window on a rainy day.">
 			</div>
 			<p class = "js-answer-feedback answer-feedback"></p>
 			<footer>
@@ -92,7 +92,7 @@
 				<p class = "js-final-score final score"></p>
 			</div>
 		</section>
-		<img src="http://www.etonline.com/sites/default/files/images/2015-07/joey_howyoudoin.gif">
+		<img src="http://www.etonline.com/sites/default/files/images/2015-07/joey_howyoudoin.gif" alt="Joey saying 'how you doin'.">
 		<div class= "start-over-button">
 			<button type="button" class= "js-start-over-button w3-button w3-black w3-round w3-hover-blue">Start Over</button>
 		</div>

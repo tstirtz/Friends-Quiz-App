@@ -100,8 +100,8 @@ function startQuiz(){
 function renderQuestion(){
 	//render question page with question and the potential answers
 	//when the user clicks the next button in the modale, move to next question
- 		$(".js-multiple-choice-answers-container").prepend(
-			`<h1 class = "js-question-string">${(questionsArray[currentQuestionIndex]['question'])}</h1>`
+ 		$(".js-question-answer-fieldset").prepend(
+			`<legend class = "js-question-string question-string">${(questionsArray[currentQuestionIndex]['question'])}</legend>`
 		);
 }
 
@@ -109,16 +109,16 @@ function renderQuestion(){
 function renderAnswers(){
 	$(".js-multiple-choice-answers-container").append(
 		`<ul class= "js-multiple-choice-answers">
-				<li><input type="radio" name="answer" id="multiple-choice-answer-A" value= "A" required>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-A" value= "A" aria-labelledby="questions-and-answers multiple-choice-answer-A" required>
 					<label for="multiple-choice-answer-A">${questionsArray[currentQuestionIndex]['A']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-B" value= "B" required>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-B" value= "B" aria-labelledby="questions-and-answers multiple-choice-answer-B" required>
 					<label for="multiple-choice-answer-B">${questionsArray[currentQuestionIndex]['B']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-C" value= "C" required>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-C" value= "C" aria-labelledby="questions-and-answers multiple-choice-answer-C" required>
 					<label for="multiple-choice-answer-C">${questionsArray[currentQuestionIndex]['C']}</label>
 				</li>
-				<li><input type="radio" name="answer" id="multiple-choice-answer-D" value= "D" required>
+				<li><input type="radio" name="answer" id="multiple-choice-answer-D" value= "D" aria-labelledby="questions-and-answers multiple-choice-answer-D" required>
 					<label for="multiple-choice-answer-D">${questionsArray[currentQuestionIndex]['D']}</label>
 				</li>
 			</ul>`
