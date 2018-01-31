@@ -92,11 +92,12 @@ fieldset:focus{
 	border: none;
 }
 
-fieldset{
+.questions-form fieldset{
 	display: block;
 	height: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	border: none;
 }
 
 fieldset li{
