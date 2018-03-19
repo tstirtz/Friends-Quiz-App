@@ -2,7 +2,7 @@
 
 const questionsArray = [
 	{
-		question: "Who is the Readers Digest addressed to that gets delivered to Chandler and Joeys?",
+		question: "Who is the Readers Digest addressed to that gets delivered to Chandler and Joey's?",
 		'A': "Mr. Chandler Bing",
 		'B': "Ms. Chanandler Bong",
 		'C': "Mr. Joey Tribbiani",
